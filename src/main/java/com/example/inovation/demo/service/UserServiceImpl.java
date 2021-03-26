@@ -16,8 +16,8 @@ public class UserServiceImpl implements UserService{
     UserDao userDao;
 
     @Override
-    public void createUser(List<User> users) {
-        userDao.saveAll(users);
+    public List<User> createUser(List<User> users) {
+       return userDao.saveAll(users);
     }
 
     @Override
